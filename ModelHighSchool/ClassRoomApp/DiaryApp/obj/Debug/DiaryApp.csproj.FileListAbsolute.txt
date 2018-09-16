@@ -1,0 +1,17 @@
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\bin\Debug\DiaryApp.exe.config
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\View\MainWindow.baml
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\View\MainWindow.g.cs
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\View\TeacherDiaryPage.g.cs
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\App.g.cs
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\DiaryApp_MarkupCompile.cache
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\DiaryApp_MarkupCompile.lref
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\bin\Debug\DiaryApp.exe
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\bin\Debug\DiaryApp.pdb
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\View\TeacherDiaryPage.baml
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\DiaryApp.g.resources
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\DiaryApp.Properties.Resources.resources
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\DiaryApp.csproj.GenerateResource.Cache
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\DiaryApp.exe
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\DiaryApp.pdb
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\DiaryApp\obj\Debug\DiaryApp.csprojResolveAssemblyReference.cache

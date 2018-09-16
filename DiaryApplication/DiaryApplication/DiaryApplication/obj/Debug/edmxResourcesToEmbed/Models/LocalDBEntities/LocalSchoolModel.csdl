@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LocalDairydbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="class_tb">
+    <Key>
+      <PropertyRef Name="class_id" />
+    </Key>
+    <Property Name="class_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="class" Type="Int32" Nullable="false" />
+    <Property Name="section" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="date_deleted" Type="DateTime" />
+    <NavigationProperty Name="schools_tb" Relationship="Self.FK_class_tb_schools_tb" FromRole="class_tb" ToRole="schools_tb" />
+    <NavigationProperty Name="classstudents_tb" Relationship="Self.FK_classstudent_tb_class_tb" FromRole="class_tb" ToRole="classstudents_tb" />
+  </EntityType>
+  <EntityType Name="note_tb">
+    <Key>
+      <PropertyRef Name="note_id" />
+    </Key>
+    <Property Name="note_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="notehealine" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="date_deleted" Type="DateTime" />
+    <NavigationProperty Name="schools_tb" Relationship="Self.FK_note_tb_schools_tb" FromRole="note_tb" ToRole="schools_tb" />
+    <NavigationProperty Name="remark_tb" Relationship="Self.FK_remark_tb_note_tb" FromRole="note_tb" ToRole="remark_tb" />
+    <NavigationProperty Name="notedata_tb" Relationship="LocalDairydbModel.FK_notedata_tb_note_tb" FromRole="note_tb" ToRole="notedata_tb" />
+    <NavigationProperty Name="diarynotes_tb" Relationship="LocalDairydbModel.note_tbdiarynotes_tb" FromRole="note_tb" ToRole="diarynotes_tb" />
+  </EntityType>
+  <EntityType Name="remark_tb">
+    <Key>
+      <PropertyRef Name="remark_id" />
+    </Key>
+    <Property Name="remark_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="note_id" Type="Int32" Nullable="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="date_deleted" Type="DateTime" />
+    <NavigationProperty Name="note_tb" Relationship="Self.FK_remark_tb_note_tb" FromRole="remark_tb" ToRole="note_tb" />
+    <NavigationProperty Name="remarkdata_tb" Relationship="LocalDairydbModel.FK_remarkdata_tb_remark_tb" FromRole="remark_tb" ToRole="remarkdata_tb" />
+  </EntityType>
+  <EntityType Name="schools_tb">
+    <Key>
+      <PropertyRef Name="school_id" />
+    </Key>
+    <Property Name="school_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="school_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="city_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="province_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="country_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="date_deleted" Type="DateTime" />
+    <NavigationProperty Name="class_tb" Relationship="Self.FK_class_tb_schools_tb" FromRole="schools_tb" ToRole="class_tb" />
+    <NavigationProperty Name="note_tb" Relationship="Self.FK_note_tb_schools_tb" FromRole="schools_tb" ToRole="note_tb" />
+    <NavigationProperty Name="student_tb" Relationship="Self.FK_student_tb_schools_tb" FromRole="schools_tb" ToRole="student_tb" />
+    <NavigationProperty Name="subsciption_tb" Relationship="Self.FK_subscription_tb_school_tb" FromRole="schools_tb" ToRole="subsciption_tb" />
+    <NavigationProperty Name="user_tb" Relationship="Self.FK_user_tb_school_tb" FromRole="schools_tb" ToRole="user_tb" />
+  </EntityType>
+  <EntityType Name="student_tb">
+    <Key>
+      <PropertyRef Name="student_id" />
+    </Key>
+    <Property Name="student_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="rollno" Type="Int32" Nullable="false" />
+    <Property Name="class_id" Type="Int32" Nullable="false" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="date_deleted" Type="DateTime" />
+    <Property Name="sex" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="schools_tb" Relationship="Self.FK_student_tb_schools_tb" FromRole="student_tb" ToRole="schools_tb" />
+    <NavigationProperty Name="user_tb" Relationship="Self.FK_student_tb_user_tb" FromRole="student_tb" ToRole="user_tb" />
+    <NavigationProperty Name="diary_tb" Relationship="LocalDairydbModel.FK_diary_tb_student_tb" FromRole="student_tb" ToRole="diary_tb" />
+  </EntityType>
+  <EntityType Name="subsciption_tb">
+    <Key>
+      <PropertyRef Name="subscription_id" />
+    </Key>
+    <Property Name="subscription_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="subscriptiontype" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="date_deleted" Type="DateTime" />
+    <NavigationProperty Name="schools_tb" Relationship="Self.FK_subscription_tb_school_tb" FromRole="subsciption_tb" ToRole="schools_tb" />
+  </EntityType>
+  <EntityType Name="user_tb">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="phoneno" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mobileno" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="relation" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="date_deleted" Type="DateTime" />
+    <Property Name="date_updated" Type="DateTime" />
+    <NavigationProperty Name="schools_tb" Relationship="Self.FK_user_tb_school_tb" FromRole="user_tb" ToRole="schools_tb" />
+    <NavigationProperty Name="student_tb" Relationship="Self.FK_student_tb_user_tb" FromRole="user_tb" ToRole="student_tb" />
+  </EntityType>
+  <EntityType Name="classstudents_tb">
+    <Key>
+      <PropertyRef Name="class_id" />
+      <PropertyRef Name="student_id" />
+      <PropertyRef Name="date_created" />
+    </Key>
+    <Property Name="class_id" Type="Int32" Nullable="false" />
+    <Property Name="student_id" Type="Int32" Nullable="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="date_deleted" Type="DateTime" />
+    <NavigationProperty Name="class_tb" Relationship="Self.FK_classstudent_tb_class_tb" FromRole="classstudents_tb" ToRole="class_tb" />
+  </EntityType>
+  <Association Name="FK_class_tb_schools_tb">
+    <End Role="schools_tb" Type="Self.schools_tb" Multiplicity="1" />
+    <End Role="class_tb" Type="Self.class_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="schools_tb">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="class_tb">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_classstudent_tb_class_tb">
+    <End Role="class_tb" Type="Self.class_tb" Multiplicity="1" />
+    <End Role="classstudents_tb" Type="Self.classstudents_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_tb">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="classstudents_tb">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_note_tb_schools_tb">
+    <End Role="schools_tb" Type="Self.schools_tb" Multiplicity="1" />
+    <End Role="note_tb" Type="Self.note_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="schools_tb">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="note_tb">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_remark_tb_note_tb">
+    <End Role="note_tb" Type="Self.note_tb" Multiplicity="1" />
+    <End Role="remark_tb" Type="Self.remark_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="note_tb">
+        <PropertyRef Name="note_id" />
+      </Principal>
+      <Dependent Role="remark_tb">
+        <PropertyRef Name="note_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_student_tb_schools_tb">
+    <End Role="schools_tb" Type="Self.schools_tb" Multiplicity="1" />
+    <End Role="student_tb" Type="Self.student_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="schools_tb">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="student_tb">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_subscription_tb_school_tb">
+    <End Role="schools_tb" Type="Self.schools_tb" Multiplicity="1" />
+    <End Role="subsciption_tb" Type="Self.subsciption_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="schools_tb">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="subsciption_tb">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_tb_school_tb">
+    <End Role="schools_tb" Type="Self.schools_tb" Multiplicity="1" />
+    <End Role="user_tb" Type="Self.user_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="schools_tb">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="user_tb">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_student_tb_user_tb">
+    <End Role="user_tb" Type="Self.user_tb" Multiplicity="1" />
+    <End Role="student_tb" Type="Self.student_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_tb">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="student_tb">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LocalDairydbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="class_tb" EntityType="Self.class_tb" />
+    <EntitySet Name="note_tb" EntityType="Self.note_tb" />
+    <EntitySet Name="remark_tb" EntityType="Self.remark_tb" />
+    <EntitySet Name="schools_tb" EntityType="Self.schools_tb" />
+    <EntitySet Name="student_tb" EntityType="Self.student_tb" />
+    <EntitySet Name="subsciption_tb" EntityType="Self.subsciption_tb" />
+    <EntitySet Name="user_tb" EntityType="Self.user_tb" />
+    <EntitySet Name="classstudents_tb" EntityType="Self.classstudents_tb" />
+    <AssociationSet Name="FK_class_tb_schools_tb" Association="Self.FK_class_tb_schools_tb">
+      <End Role="schools_tb" EntitySet="schools_tb" />
+      <End Role="class_tb" EntitySet="class_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_classstudent_tb_class_tb" Association="Self.FK_classstudent_tb_class_tb">
+      <End Role="class_tb" EntitySet="class_tb" />
+      <End Role="classstudents_tb" EntitySet="classstudents_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_note_tb_schools_tb" Association="Self.FK_note_tb_schools_tb">
+      <End Role="schools_tb" EntitySet="schools_tb" />
+      <End Role="note_tb" EntitySet="note_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_remark_tb_note_tb" Association="Self.FK_remark_tb_note_tb">
+      <End Role="note_tb" EntitySet="note_tb" />
+      <End Role="remark_tb" EntitySet="remark_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_student_tb_schools_tb" Association="Self.FK_student_tb_schools_tb">
+      <End Role="schools_tb" EntitySet="schools_tb" />
+      <End Role="student_tb" EntitySet="student_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_subscription_tb_school_tb" Association="Self.FK_subscription_tb_school_tb">
+      <End Role="schools_tb" EntitySet="schools_tb" />
+      <End Role="subsciption_tb" EntitySet="subsciption_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_tb_school_tb" Association="Self.FK_user_tb_school_tb">
+      <End Role="schools_tb" EntitySet="schools_tb" />
+      <End Role="user_tb" EntitySet="user_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_student_tb_user_tb" Association="Self.FK_student_tb_user_tb">
+      <End Role="user_tb" EntitySet="user_tb" />
+      <End Role="student_tb" EntitySet="student_tb" />
+    </AssociationSet>
+    <EntitySet Name="notedata_tb" EntityType="LocalDairydbModel.notedata_tb" />
+    <EntitySet Name="remarkdata_tb" EntityType="LocalDairydbModel.remarkdata_tb" />
+    <AssociationSet Name="FK_notedata_tb_note_tb" Association="LocalDairydbModel.FK_notedata_tb_note_tb">
+      <End EntitySet="note_tb" Role="note_tb" />
+      <End EntitySet="notedata_tb" Role="notedata_tb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_remarkdata_tb_remark_tb" Association="LocalDairydbModel.FK_remarkdata_tb_remark_tb">
+      <End Role="remark_tb" EntitySet="remark_tb" />
+      <End Role="remarkdata_tb" EntitySet="remarkdata_tb" />
+    </AssociationSet>
+    <EntitySet Name="diary_tb" EntityType="LocalDairydbModel.diary_tb" />
+    <AssociationSet Name="FK_diary_tb_student_tb" Association="LocalDairydbModel.FK_diary_tb_student_tb">
+      <End Role="student_tb" EntitySet="student_tb" />
+      <End Role="diary_tb" EntitySet="diary_tb" />
+    </AssociationSet>
+    <EntitySet Name="diarynotes_tb" EntityType="LocalDairydbModel.diarynotes_tb" />
+    <AssociationSet Name="note_tbdiarynotes_tb" Association="LocalDairydbModel.note_tbdiarynotes_tb">
+      <End Role="note_tb" EntitySet="note_tb" />
+      <End Role="diarynotes_tb" EntitySet="diarynotes_tb" />
+    </AssociationSet>
+    <AssociationSet Name="diary_tbdiarynotes_tb" Association="LocalDairydbModel.diary_tbdiarynotes_tb">
+      <End Role="diary_tb" EntitySet="diary_tb" />
+      <End Role="diarynotes_tb" EntitySet="diarynotes_tb" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="notedata_tb">
+    <Key>
+      <PropertyRef Name="notedata_id" />
+    </Key>
+    <Property Name="notedata_id" Type="Int32" Nullable="false" />
+    <Property Name="note_id" Type="Int32" Nullable="false" />
+    <Property Name="notetext" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="noteimage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="notemedia" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="note_tb" Relationship="LocalDairydbModel.FK_notedata_tb_note_tb" FromRole="notedata_tb" ToRole="note_tb" />
+  </EntityType>
+  <EntityType Name="remarkdata_tb">
+    <Key>
+      <PropertyRef Name="remarkdata_id" />
+    </Key>
+    <Property Name="remarkdata_id" Type="Int32" Nullable="false" />
+    <Property Name="remark_id" Type="Int32" Nullable="false" />
+    <Property Name="remarktext" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="remarkimage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="remarkmedia" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="remark_tb" Relationship="LocalDairydbModel.FK_remarkdata_tb_remark_tb" FromRole="remarkdata_tb" ToRole="remark_tb" />
+  </EntityType>
+  <Association Name="FK_notedata_tb_note_tb">
+    <End Type="LocalDairydbModel.note_tb" Multiplicity="1" Role="note_tb" />
+    <End Type="LocalDairydbModel.notedata_tb" Multiplicity="*" Role="notedata_tb" />
+    <ReferentialConstraint>
+      <Principal Role="note_tb">
+        <PropertyRef Name="note_id" />
+      </Principal>
+      <Dependent Role="notedata_tb">
+        <PropertyRef Name="note_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_remarkdata_tb_remark_tb">
+    <End Type="LocalDairydbModel.remark_tb" Role="remark_tb" Multiplicity="1" />
+    <End Type="LocalDairydbModel.remarkdata_tb" Role="remarkdata_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="remark_tb">
+        <PropertyRef Name="remark_id" />
+      </Principal>
+      <Dependent Role="remarkdata_tb">
+        <PropertyRef Name="remark_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="diary_tb">
+    <Key>
+      <PropertyRef Name="student_id" />
+    </Key>
+    <Property Name="diaryno" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="student_id" Type="Int32" Nullable="false" />
+    <Property Name="note_id" Type="Int32" Nullable="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="date_deleted" Type="DateTime" />
+    <NavigationProperty Name="student_tb" Relationship="LocalDairydbModel.FK_diary_tb_student_tb" FromRole="diary_tb" ToRole="student_tb" />
+    <NavigationProperty Name="diarynotes_tb" Relationship="LocalDairydbModel.diary_tbdiarynotes_tb" FromRole="diary_tb" ToRole="diarynotes_tb" />
+  </EntityType>
+  <Association Name="FK_diary_tb_student_tb">
+    <End Type="LocalDairydbModel.student_tb" Role="student_tb" Multiplicity="1" />
+    <End Type="LocalDairydbModel.diary_tb" Role="diary_tb" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="student_tb">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="diary_tb">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="diarynotes_tb">
+    <Key>
+      <PropertyRef Name="diarynotes_id" />
+    </Key>
+    <Property Name="diarynotes_id" Type="Int32" Nullable="false" />
+    <Property Name="diaryno" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="note_id" Type="Int32" Nullable="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="date_deleted" Type="DateTime" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="note_tb" Relationship="LocalDairydbModel.note_tbdiarynotes_tb" FromRole="diarynotes_tb" ToRole="note_tb" />
+    <NavigationProperty Name="diary_tb" Relationship="LocalDairydbModel.diary_tbdiarynotes_tb" FromRole="diarynotes_tb" ToRole="diary_tb" />
+  </EntityType>
+  <Association Name="note_tbdiarynotes_tb">
+    <End Type="LocalDairydbModel.note_tb" Role="note_tb" Multiplicity="1" />
+    <End Type="LocalDairydbModel.diarynotes_tb" Role="diarynotes_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="note_tb">
+        <PropertyRef Name="note_id" />
+      </Principal>
+      <Dependent Role="diarynotes_tb">
+        <PropertyRef Name="note_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="diary_tbdiarynotes_tb">
+    <End Type="LocalDairydbModel.diary_tb" Role="diary_tb" Multiplicity="1" />
+    <End Type="LocalDairydbModel.diarynotes_tb" Role="diarynotes_tb" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="diary_tb">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="diarynotes_tb">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

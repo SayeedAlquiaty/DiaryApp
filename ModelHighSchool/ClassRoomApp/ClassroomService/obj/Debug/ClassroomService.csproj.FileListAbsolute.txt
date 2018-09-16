@@ -1,0 +1,6 @@
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomService\bin\ClassroomService.dll.config
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomService\bin\ClassroomService.dll
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomService\bin\ClassroomService.pdb
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomService\obj\Debug\ClassroomService.csprojResolveAssemblyReference.cache
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomService\obj\Debug\ClassroomService.dll
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomService\obj\Debug\ClassroomService.pdb

@@ -1,0 +1,6 @@
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomDB\bin\Release\ClassRoomDB.dll.config
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomDB\bin\Release\ClassRoomDB.dll
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomDB\bin\Release\ClassRoomDB.pdb
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomDB\obj\Release\ClassRoomDB.csprojResolveAssemblyReference.cache
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomDB\obj\Release\ClassRoomDB.dll
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomDB\obj\Release\ClassRoomDB.pdb

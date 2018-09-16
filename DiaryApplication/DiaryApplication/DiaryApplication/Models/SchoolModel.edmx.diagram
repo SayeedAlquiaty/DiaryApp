@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1f69268aeaf74a738e6987200081b7ec" Name="Diagram1">
+        <EntityTypeShape EntityType="DairyDBModel.schools_tb" Width="1.5" PointX="0.625" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DairyDBModel.student_tb" Width="1.5" PointX="6.625" PointY="5.5" />
+        <EntityTypeShape EntityType="DairyDBModel.user_tb" Width="1.5" PointX="4.625" PointY="4.625" />
+        <AssociationConnector Association="DairyDBModel.FK_user_tb_school_tb" />
+        <AssociationConnector Association="DairyDBModel.FK_student_tb_user_tb" />
+        <EntityTypeShape EntityType="DairyDBModel.class_tb" Width="1.5" PointX="0.75" PointY="0.5" />
+        <EntityTypeShape EntityType="DairyDBModel.note_tb" Width="1.5" PointX="4.625" PointY="0.75" />
+        <EntityTypeShape EntityType="DairyDBModel.remark_tb" Width="1.5" PointX="8.875" PointY="0.5" />
+        <AssociationConnector Association="DairyDBModel.FK_class_tb_schools_tb" />
+        <AssociationConnector Association="DairyDBModel.FK_note_tb_schools_tb" />
+        <AssociationConnector Association="DairyDBModel.FK_remark_tb_note_tb" />
+        <EntityTypeShape EntityType="DairyDBModel.subsciption_tb" Width="1.5" PointX="2.5" PointY="5.375" />
+        <EntityTypeShape EntityType="DairyDBModel.classstudents_tb" Width="1.5" PointX="2.75" PointY="0.5" />
+        <AssociationConnector Association="DairyDBModel.FK_classstudent_tb_class_tb" />
+        <AssociationConnector Association="DairyDBModel.FK_subscription_tb_school_tb" />
+        <AssociationConnector Association="DairyDBModel.FK_student_tb_schools_tb" />
+        <EntityTypeShape EntityType="DairyDBModel.notedata_tb" Width="1.5" PointX="6.875" PointY="10.25" />
+        <EntityTypeShape EntityType="DairyDBModel.remarkdata_tb" Width="1.5" PointX="11.125" PointY="4.625" />
+        <AssociationConnector Association="DairyDBModel.FK_notedata_tb_note_tb" />
+        <AssociationConnector Association="DairyDBModel.FK_remarkdata_tb_remark_tb" />
+        <EntityTypeShape EntityType="DairyDBModel.diary_tb" Width="1.5" PointX="11.25" PointY="8.125" />
+        <AssociationConnector Association="DairyDBModel.FK_diary_tb_student_tb" />
+        <EntityTypeShape EntityType="DairyDBModel.diarynotes_tb" Width="1.5" PointX="8.375" PointY="4.25" />
+        <AssociationConnector Association="DairyDBModel.note_tbdiarynotes_tb" />
+        <AssociationConnector Association="DairyDBModel.diary_tbdiarynotes_tb" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

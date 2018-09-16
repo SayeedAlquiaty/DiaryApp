@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Product App</title>
+    <style>
+        .formlabel {
+            clear: left;
+            display: block;
+            float: left;
+            margin: 0 0 1em 0;
+            padding: 0 0.5em 0 0;
+            text-align: right;
+            width: 8em;
+        }
+
+        .forminput {
+            float: left;
+            margin: 0 0.5em 0.5em 0;
+        }
+
+
+        .formwarning {
+            clear: left;
+            float: left;
+            margin: 0 0.5em 1em 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!--div>
+        <h2>All Schools</h2>
+        <table id="schools"  border="1" style="width:100%" >
+        </table>
+    </div-->
+    <div>
+        <h2>Add Students to school</h2>
+        <form id="details">
+            <fieldset>
+                <legend>Details</legend>
+                <div class="formwarning">Parent details</div>
+                <label for="pfirstname" class="formlabel">Firstname</label>
+                <input id="pfirstname" name="pfirstname" type="text" class="forminput" />
+                <label for="psurname" class="forminput">Surname</label>
+                <input id="psurname" name="psurname" type="text" class="forminput" />
+                <label for="relation" class="formlabel">Relation</label>
+                <select id="relation" size="1" class="forminput">
+                    <option>Father</option>
+                    <option>Mother</option>
+                </select>
+                <label for="email" class="formlabel">Email</label>
+                <input id="email" name="email" type="text" class="forminput" />
+                <label for="phone" class="forminput">Phone</label>
+                <input id="phone" name="phonenumber" type="text" class="forminput" />
+                <label for="mobile" class="forminput">Mobile</label>
+                <input id="mobile" name="mobilenumber" type="text" class="forminput" />
+                <label for="address" class="formlabel">Address</label>
+                <input id="address" name="address" type="text" class="forminput" />
+
+                <div class="formwarning">Child details</div>
+                
+                <div>
+                    <label for="myschool" class="formlabel">School</label>
+                    <select id="myschool" size="1" class="forminput" onchange="getclasses();"></select>
+                    <label for="myclass" class="forminput">Class</label>
+                    <select id="myclass" size="1" class="forminput"></select>
+                </div>
+                
+
+
+                <label for="sfirstname" class="formlabel">Firstname</label>
+                <input id="sfirstname" name="sfirstname" type="text" class="forminput" />
+                <label for="ssurname" class="forminput">Surname</label>
+                <input id="ssurname" name="ssurname" type="text" class="forminput" />
+
+                <div>
+                    <label class="formlabel">Sex</label>
+                    <select id="sex" size="1" class="forminput">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+
+                    <label for="dob_year" class="formlabel">DOB</label>
+                    <div class="forminput">
+                        <input id="dob_year" name="dob_year" type="text" size="4" /> /
+                        <input id="dob_month" name="dob_month" type="text" size="2" /> /
+                        <input id="dob_day" name="dob_day" type="text" size="2" />
+                    </div>
+                    <label for="addchild" class="formlabel" >Add</label>
+                    <a href="javascript:add();" class="forminput">Add</a>
+                    <!--input id="addchild" name="addchild" class="forminput" type="button"  onclick="add();"/-->
+
+                    <div>
+                        <h2 class="formlabel">List of Students</h2>
+                        <table id="studenttable" border="1" style="width:100%">
+                            <tr id="0"><th>First Name</th><th>Surname Name</th><th>Sex</th><th>School</th><th>Class</th></tr>
+                        </table>
+                    </div>
+
+                    <label for="submit" class="forminput">Submit</label>
+                    <a href="javascript:submit();" class="forminput">Submit</a>
+                    <!--button id="submit" name="submit" class="forminput" onclick="submit();">Submit</button-->
+                    <div id="children" class="formlabel"></div>
+</fieldset>
+        </form>
+        
+    </div>
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="schoolId" size="5" />
+        <input type="button" value="Search" onclick="find();" />
+        <p id="school" />
+    </div>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+        var uri = 'api/school';
+        var schooldata = new Array();
+        var classdata = new Array();
+        var childrencount = 0;
+        //var students_dto = [];
+        var user_dto = {};
+        user_dto.students_dto = [];
+
+        $(document).ready(function () {
+            // Send an AJAX request
+            $.getJSON(uri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of products.
+                    //$('<tr><th>ID</th><th>Name</th><th>City</th></tr>').appendTo($('#schools'));
+                    schooldata = data;
+                    $.each(data, function (key, item) {
+                        // Add a list item for the product.
+                        $('<option>', { id: item.school_id, text: formatItem(item), value: item.school_id, onclick: "getclasses();" }).appendTo($('#myschool'));
+                    });
+                    getclasses();
+                });
+            
+        });
+
+
+        function formatItem(item) {
+            return item.school_name + ',' + item.city_name;
+        }
+
+        function getclasses()
+        {
+            //var shoolid = $(document)('#myschool');
+            var uri_class = 'api/class';
+            var my_school = document.getElementById("myschool");
+            var my_class = document.getElementById("myclass");
+            my_class.options.length = 0;
+            //alert(myselect.id);
+            //alert(myselect.options[myselect.selectedIndex].value);
+            var id = my_school.options[my_school.selectedIndex].value;
+
+            
+            $.each(schooldata[id-1].class_dto, function (key, item) {
+                // Add a list item for the product.
+                $('<option>', { id: item.school_id, text: formatClass(item), value: item.class_id }).appendTo($('#myclass'));
+            });
+
+        }
+
+        function formatClass(item) {
+            return item.class + ',' + item.section;
+        }
+
+        function add() {
+
+            //var SFirstname = document.forms["details"]["sfirstname"].value;
+            var my_school = document.getElementById("myschool");
+            var my_class = document.getElementById("myclass");
+            var schoolid = my_school.options[my_school.selectedIndex].value;
+            var classid = my_class.options[my_class.selectedIndex].value;
+            var my_sex = document.getElementById("sex");
+            var sex = my_sex.options[my_sex.selectedIndex].value;
+            var my_address = document.getElementById("address").value;
+
+            var mystudent = $("#studenttable");
+            var sfname = document.getElementById("sfirstname").value;
+            var ssname = document.getElementById("ssurname").value;
+            var school_name = $("#")
+            var today = new Date();
+           
+            user_dto.students_dto[childrencount] = {};
+            user_dto.students_dto[childrencount].student_id = 0;
+            user_dto.students_dto[childrencount].user_id = 0;
+            user_dto.students_dto[childrencount].firstname = sfname;
+            user_dto.students_dto[childrencount].surname = ssname;
+            user_dto.students_dto[childrencount].rollno = 1;
+            user_dto.students_dto[childrencount].class_id = classid;
+            user_dto.students_dto[childrencount].school_id = schoolid;
+            user_dto.students_dto[childrencount].address = my_address;
+            user_dto.students_dto[childrencount].remarks = "";
+            user_dto.students_dto[childrencount].date_created = "";
+            user_dto.students_dto[childrencount].sex = sex;
+            
+            //students_dto[childrencount] = new student(0, 0, sfname, ssname, sex, 1, classid, schoolid, my_address, "", "");
+            
+            alert(JSON.stringify(user_dto.students_dto[childrencount]));
+            childrencount = childrencount + 1;
+            
+            $('<tr id="child' + childrencount + '"><td>' + sfname + '</td><td>' + ssname + '</td><td>' + sex + '</td><td>' + my_school.options[my_school.selectedIndex].text + '</td><td>' + my_class.options[my_class.selectedIndex].text + '</td></tr>').appendTo($('#studenttable'));
+
+        }
+
+        function deleteitem() {
+
+            //var SFirstname = document.forms["details"]["sfirstname"].value;
+            var my_school = document.getElementById("myschool");
+            var my_class = document.getElementById("myclass");
+            var schoolid = my_school.options[my_school.selectedIndex].value;
+            var classid = my_class.options[my_class.selectedIndex].value;
+            var my_sex = document.getElementById("sex");
+            var sex = my_sex.options[my_sex.selectedIndex].value;
+
+            var mystudent = $("#studenttable");
+            var sfname = document.getElementById("sfirstname").value;
+            var ssname = document.getElementById("ssurname").value;
+            var school_name = $("#")
+            childrencount = childrencount + 1;
+
+            $('<tr id="child' + childrencount + '"><td>' + sfname + '</td><td>' + ssname + '</td><td>' + sex + '</td><td>' + my_school.options[my_school.selectedIndex].text + '</td><td>' + my_class.options[my_class.selectedIndex].text + '</td></tr>').appendTo($('#studenttable'));
+        }
+
+        function submit() {
+            var uri_user = 'api/parent';
+            //var SFirstname = document.forms["details"]["sfirstname"].value;
+            var pfname = document.getElementById("pfirstname").value;
+            var psname = document.getElementById("psurname").value;
+
+            var my_realtion = document.getElementById("relation");
+            var relation_t = my_realtion.options[my_realtion.selectedIndex].text;
+
+            var my_email = document.getElementById("email").value;
+            var my_phone = document.getElementById("phone").value;
+            var my_mobile = document.getElementById("mobile").value;
+            var my_address = document.getElementById("address").value;
+
+            var my_school = document.getElementById("myschool");
+            var my_class = document.getElementById("myclass");
+            var schoolid = my_school.options[my_school.selectedIndex].value;
+            var classid = my_class.options[my_class.selectedIndex].value;
+            var my_sex = document.getElementById("sex");
+            var sex = my_sex.options[my_sex.selectedIndex].value;
+
+            var mystudent = $("#studenttable");
+            var sfname = document.getElementById("sfirstname").value;
+            var ssname = document.getElementById("ssurname").value;
+            var school_name = $("#")
+            childrencount = childrencount + 1;
+
+            var today = new Date();
+
+            //var strschools_dto = students_dto.toString();
+            /*var users_dto = {
+                user_id: 1,
+                school_id: schoolid,
+                user_name: my_email,
+                password: "",
+                firstname: pfname,
+                surname: psname,
+                type: "P",
+                phoneno: my_phone,
+                mobileno: my_mobile,
+                address: my_address,
+                relation: relation_t,
+                remarks: "",
+                date_created: "",
+                student_dto: students_dto
+            };*/
+
+
+            
+            user_dto.user_id = 1;
+            user_dto.school_id= schoolid.to;
+            user_dto.user_name= my_email;
+            user_dto.password= "";
+            user_dto.firstname= pfname;
+            user_dto.surname= psname;
+            user_dto.type= "P";
+            user_dto.phoneno= my_phone;
+            user_dto.mobileno= my_mobile;
+            user_dto.address= my_address;
+            user_dto.relation= relation_t;
+            user_dto.remarks= "";
+            user_dto.date_created = "";
+           
+
+            // construct an HTTP request
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("children").innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("POST", "api/parent", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            //xmlhttp.setRequestHeader("Content-type", "application/json; charset=utf-8");
+            //xmlhttp.send("fname=Henry&lname=Ford");
+            //var response = ["sayeed", "ALQUIATy"];
+            //var users_dto = { user_dto };
+            alert(JSON.stringify(user_dto));
+            //alert(user_dto.students_dto[0].firstname);
+
+            //var  response = JSON.stringify(user_dto);
+
+            var sayeed = {
+                firstname: "Sayeed",
+                surname: "ALQuiaty"
+            };
+            alert(JSON.stringify({ person: sayeed }));
+            //xmlhttp.send(sayeed.toString());
+            $.ajax({
+                url: "api/parent",
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(user_dto),
+            success: function(response) {
+                response ? alert("It worked!") : alert("It didn't work.");
+            }
+            });
+        }
+
+        function find() {
+            var id = $('#schoolId').val();
+            $.getJSON(uri + '/' + id)
+                .done(function (data) {
+                    $('#school').text(formatItem(data));
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    $('#school').text('Error: ' + err);
+                });
+        }
+
+        /*var user = fucntion(user_id, school_id, email, pfirstname, psurname, type, phone, mobile, address, relation, date_created, students)
+        {
+            this.user_id = user_id;
+            this.school_id = school_id;
+            this.user_name = email;
+            this.firstname = pfirstname;
+            this.surname = psurname;
+            this.type = type;
+            this.phoneno = phone;
+            this.mobileno = mobile;
+            this.address = address;
+            this.relation = relation;
+            this.date_created = date_created;
+            this.students = students;
+
+        }
+
+        var student = fucntion(student_id, user_id, sfirstname, ssurname, sex, class_id, school_id, address, remarks, date_created)
+        {
+            this.student_id = student_id;
+            this.user_id = user_id;
+            this.firstname = sfirstname;
+            this.surname = ssurname;
+            this.sex = sex; 
+            this.class_id = class_id;
+            this.school_id = school_id;
+            this.address = address;
+            this.remarks = remarks;
+            this.date_created = date_created;
+
+            
+            
+        };*/
+
+       
+
+        /*$(document).ready(function () {
+            // Send an AJAX request
+            $.getJSON(uri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of products.
+                    $('<tr><th>ID</th><th>Name</th><th>City</th></tr>').appendTo($('#schools'));
+                    $.each(data, function (key, item) {
+                        // Add a list item for the product.
+                        $(formatItem(item)).appendTo($('#schools'));
+                    });
+                });
+        });
+        function formatItem(item) {
+            return '<tr><td>' + item.school_id + '</td><td>' + item.school_name + '</td><td>' + item.city_name + '</td></tr>';
+        }
+        */
+
+        /*var frmvalidator = new Validator("myform");
+        frmvalidator.addValidation("FirstName", "req", "Please enter your First Name");
+        frmvalidator.addValidation("FirstName", "maxlen=20",
+               "Max length for FirstName is 20");
+
+        frmvalidator.addValidation("LastName", "req");
+        frmvalidator.addValidation("LastName", "maxlen=20");
+
+        frmvalidator.addValidation("Email", "maxlen=50");
+        frmvalidator.addValidation("Email", "req");
+        frmvalidator.addValidation("Email", "email");
+
+        frmvalidator.addValidation("Phone", "maxlen=50");
+        frmvalidator.addValidation("Phone", "numeric");
+
+        frmvalidator.addValidation("Address", "maxlen=50");
+        frmvalidator.addValidation("Country", "dontselect=000");*/
+        
+    </script>
+</body>
+</html>
+

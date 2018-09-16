@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LocalDairydbModelStoreContainer" CdmEntityContainer="LocalDairydbEntities">
+    <EntitySetMapping Name="class_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.class_tb">
+        <MappingFragment StoreEntitySet="class_tb">
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="section" ColumnName="section" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="note_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.note_tb">
+        <MappingFragment StoreEntitySet="note_tb">
+          <ScalarProperty Name="note_id" ColumnName="note_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="notehealine" ColumnName="notehealine" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="remark_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.remark_tb">
+        <MappingFragment StoreEntitySet="remark_tb">
+          <ScalarProperty Name="remark_id" ColumnName="remark_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="note_id" ColumnName="note_id" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="schools_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.schools_tb">
+        <MappingFragment StoreEntitySet="schools_tb">
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="school_name" ColumnName="school_name" />
+          <ScalarProperty Name="city_name" ColumnName="city_name" />
+          <ScalarProperty Name="province_name" ColumnName="province_name" />
+          <ScalarProperty Name="country_name" ColumnName="country_name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.student_tb">
+        <MappingFragment StoreEntitySet="student_tb">
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="rollno" ColumnName="rollno" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subsciption_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.subsciption_tb">
+        <MappingFragment StoreEntitySet="subsciption_tb">
+          <ScalarProperty Name="subscription_id" ColumnName="subscription_id" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="subscriptiontype" ColumnName="subscriptiontype" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.user_tb">
+        <MappingFragment StoreEntitySet="user_tb">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="relation" ColumnName="relation" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+          <ScalarProperty Name="date_updated" ColumnName="date_updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classstudents_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.classstudents_tb">
+        <MappingFragment StoreEntitySet="classstudents_tb">
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notedata_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.notedata_tb">
+        <MappingFragment StoreEntitySet="notedata_tb">
+          <ScalarProperty Name="notemedia" ColumnName="notemedia" />
+          <ScalarProperty Name="noteimage" ColumnName="noteimage" />
+          <ScalarProperty Name="notetext" ColumnName="notetext" />
+          <ScalarProperty Name="note_id" ColumnName="note_id" />
+          <ScalarProperty Name="notedata_id" ColumnName="notedata_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="remarkdata_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.remarkdata_tb">
+        <MappingFragment StoreEntitySet="remarkdata_tb">
+          <ScalarProperty Name="remarkmedia" ColumnName="remarkmedia" />
+          <ScalarProperty Name="remarkimage" ColumnName="remarkimage" />
+          <ScalarProperty Name="remarktext" ColumnName="remarktext" />
+          <ScalarProperty Name="remark_id" ColumnName="remark_id" />
+          <ScalarProperty Name="remarkdata_id" ColumnName="remarkdata_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="diary_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.diary_tb">
+        <MappingFragment StoreEntitySet="diary_tb">
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="note_id" ColumnName="note_id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="diaryno" ColumnName="diaryno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="diarynotes_tb">
+      <EntityTypeMapping TypeName="LocalDairydbModel.diarynotes_tb">
+        <MappingFragment StoreEntitySet="diarynotes_tb">
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="note_id" ColumnName="note_id" />
+          <ScalarProperty Name="diaryno" ColumnName="diaryno" />
+          <ScalarProperty Name="diarynotes_id" ColumnName="diarynotes_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

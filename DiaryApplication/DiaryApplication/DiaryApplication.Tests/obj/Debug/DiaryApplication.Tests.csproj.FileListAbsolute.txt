@@ -1,0 +1,17 @@
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\obj\Debug\DiaryApplication.Tests.csprojResolveAssemblyReference.cache
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\DiaryApplication.Tests.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\DiaryApplication.Tests.pdb
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\DiaryApplication.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\EntityFramework.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\DiaryApplication.pdb
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\EntityFramework.xml
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\obj\Debug\DiaryApplication.Tests.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication.Tests\obj\Debug\DiaryApplication.Tests.pdb

@@ -1,0 +1,5 @@
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\PortableClassLibrary1\obj\Debug\DatabaseTransactions.csprojResolveAssemblyReference.cache
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\PortableClassLibrary1\bin\Debug\DatabaseTransactions.dll
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\PortableClassLibrary1\bin\Debug\DatabaseTransactions.pdb
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\PortableClassLibrary1\obj\Debug\DatabaseTransactions.dll
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\PortableClassLibrary1\obj\Debug\DatabaseTransactions.pdb

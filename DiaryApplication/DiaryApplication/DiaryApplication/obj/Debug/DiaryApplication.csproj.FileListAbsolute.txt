@@ -1,0 +1,15 @@
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\DiaryApplication.dll.config
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\DiaryApplication.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\DiaryApplication.pdb
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\EntityFramework.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\Newtonsoft.Json.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\System.Net.Http.Formatting.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\System.Web.Http.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\System.Web.Http.WebHost.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\EntityFramework.xml
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\Newtonsoft.Json.xml
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\System.Net.Http.Formatting.xml
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\System.Web.Http.xml
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\bin\System.Web.Http.WebHost.xml
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\obj\Debug\DiaryApplication.dll
+C:\Users\ALQUIATY\Documents\DiaryApplication\DiaryApplication\DiaryApplication\obj\Debug\DiaryApplication.pdb

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DairyDBModelStoreContainer" CdmEntityContainer="DairyDBEntities1">
+    <EntitySetMapping Name="user_tb">
+      <EntityTypeMapping TypeName="DairyDBModel.user_tb">
+        <MappingFragment StoreEntitySet="user_tb">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="relation" ColumnName="relation" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+          <ScalarProperty Name="date_updated" ColumnName="date_updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

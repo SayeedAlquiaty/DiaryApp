@@ -1,0 +1,1 @@
+NawalSoftware@diarydb.coy4nndgjuns.us-west-2.rds.amazonaws.com:3306

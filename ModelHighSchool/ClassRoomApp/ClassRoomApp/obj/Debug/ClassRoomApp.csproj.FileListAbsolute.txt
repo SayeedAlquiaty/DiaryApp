@@ -1,0 +1,13 @@
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\bin\Debug\ClassRoomApp.exe.config
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\bin\Debug\ClassRoomApp.exe
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\bin\Debug\ClassRoomApp.pdb
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\obj\Debug\ClassRoomApp.csprojResolveAssemblyReference.cache
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\obj\Debug\MainWindow.baml
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\obj\Debug\MainWindow.g.cs
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\obj\Debug\App.g.cs
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\obj\Debug\ClassRoomApp_MarkupCompile.cache
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\obj\Debug\ClassRoomApp.g.resources
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\obj\Debug\ClassRoomApp.Properties.Resources.resources
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\obj\Debug\ClassRoomApp.csproj.GenerateResource.Cache
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\obj\Debug\ClassRoomApp.exe
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassRoomApp\obj\Debug\ClassRoomApp.pdb

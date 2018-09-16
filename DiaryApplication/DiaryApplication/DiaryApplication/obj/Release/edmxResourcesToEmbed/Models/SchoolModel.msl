@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DairyDBModelStoreContainer" CdmEntityContainer="DairyDBEntities">
+    <EntitySetMapping Name="schools_tb">
+      <EntityTypeMapping TypeName="DairyDBModel.schools_tb">
+        <MappingFragment StoreEntitySet="schools_tb">
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="school_name" ColumnName="school_name" />
+          <ScalarProperty Name="city_name" ColumnName="city_name" />
+          <ScalarProperty Name="province_name" ColumnName="province_name" />
+          <ScalarProperty Name="country_name" ColumnName="country_name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="searchschool_by_city_pro" FunctionName="DairyDBModel.Store.searchschool_by_city_pro" />
+    <FunctionImportMapping FunctionImportName="searchschool_by_id_pro" FunctionName="DairyDBModel.Store.searchschool_by_id_pro" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,11 @@
+﻿<Window x:Class="DiaryApp.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Background="AliceBlue">
+        <Button Content="I'm a Teacher" HorizontalAlignment="Left" Margin="185,148,0,0" VerticalAlignment="Top" Width="143" Height="47" Click="Teacher_Click"/>
+        <Button Content="I'm a Parent" HorizontalAlignment="Left" Margin="185,218,0,0" VerticalAlignment="Top" Width="143" Height="47" Click="Parent_Click"/>
+        <Label Content="Welcome to Model High Diary App" Margin="161,34,167,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\DiaryApp.Tests.dll
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\DiaryApp.Tests.pdb
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\DiaryApp.dll
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\DiaryApp.pdb
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\obj\Debug\DiaryApp.Tests.csprojResolveAssemblyReference.cache
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\obj\Debug\DiaryApp.Tests.dll
+C:\Users\ALQUIATY\Documents\DiaryApp\DiaryApp\DiaryApp.Tests\obj\Debug\DiaryApp.Tests.pdb

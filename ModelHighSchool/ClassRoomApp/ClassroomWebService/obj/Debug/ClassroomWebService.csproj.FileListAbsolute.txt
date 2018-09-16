@@ -1,0 +1,8 @@
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomWebService\bin\ClassroomWebService.dll.config
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomWebService\bin\ClassroomWebService.dll
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomWebService\bin\ClassroomWebService.pdb
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomWebService\obj\Debug\ClassroomWebService.csprojResolveAssemblyReference.cache
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomWebService\obj\Debug\ClassroomWebService.dll
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomWebService\obj\Debug\ClassroomWebService.pdb
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomWebService\bin\ClassRoomDB.dll
+C:\Users\ALQUIATY\Documents\ModelHighSchool\ClassRoomApp\ClassroomWebService\bin\ClassRoomDB.pdb

@@ -1,0 +1,3 @@
+INSERT INTO `DairyDB`.`schools_tb` (`school_id`, `school_name`, `city_name`, `province_name`, `country_name`, `address`, `phone`, `date_created`) VALUES ('1', 'MS Creative', 'Hyderabad', 'Telangana', 'India', 'Mehdipatnam', '1234567891', '2015-04-28');
+INSERT INTO `DairyDB`.`schools_tb` (`school_id`, `school_name`, `city_name`, `province_name`, `country_name`, `address`, `phone`, `date_created`) VALUES ('2', 'Azra Public School', 'Hyderabad', 'Telangana', 'India', 'Mehdipatnam', '1234567891', '2015-04-28');
+INSERT INTO `DairyDB`.`schools_tb` (`school_id`, `school_name`, `city_name`, `province_name`, `country_name`, `address`, `phone`, `date_created`) VALUES ('3', 'Gotam High School', 'Hyderabad', 'Telangana', 'India', 'Mehdipatnam', '1234567891', '2015-04-28');
